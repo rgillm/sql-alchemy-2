@@ -20,7 +20,7 @@ def hello():
 @app.route("/api/customers")
 def customers():
     customers = get_customers()
-    response = [customer._asdict() for customer in customers]
+    response = [customer.as_dict() for customer in customers]
     return jsonify(response)
 
 
